@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    退出登录，没有提示
+</body>
+</html>
+
+
+<empty name="on_items">
+    <div class="clearfix kz-padding-top" id="unused"><p class="placeHolder text-center">暂无记录！</p></div>
+    <else/>
+    <!--我的设备筛选-->
+    <div class="device-filter">
+        <div class="container-fluid device-select">
+            <ul class="clearfix list-group" style="margin-bottom: 15px;">
+                <form id="search_box">
+                    <li class="pull-left device-search">
+                        <div class="kz-text-default device-search-header">
+                            搜索：<input name="search" type="text" placeholder="输入SN码/机型/配置筛选/订单号" aria-describedby="basic-addon1">
+                            <ul class="device-search-body" id="search_order" style="display:none;z-index: 9999;">
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="kz-text-default pull-left device-status">
+                        设备状态：
+                        <div class="device-container ">
+                            <div class="device-status-header">
+                                <input name="device_type" type="text" readonly="readonly" class=" device-status-input" data-type="0" value="全部"/>
+                                <span class="iconfont device-status-arrow"></span>
+                            </div>
+                            <ul class="device-status-wrap hide">
+                                <li class="active" data-name="全部" data-status="0">
+                                    <span class="iconfont"></span>
+                                    全部
+                                </li>
+                                <li data-name="正常租赁" data-status="1">
+                                    <span class="iconfont"></span>
+                                    正常租赁
+                                </li>
+                                <li data-name="等待审核" data-status="2">
+                                    <span class="iconfont"></span>
+                                    等待审核
+                                </li>
+                                <li data-name="审核通过" data-status="3">
+                                    <span class="iconfont"></span>
+                                    审核通过
+                                </li>
+                                <li data-name="审核拒绝" data-status="4">
+                                    <span class="iconfont"></span>
+                                    审核拒绝
+                                </li>
+                                <li data-name="等待回寄" data-status="5">
+                                    <span class="iconfont"></span>
+                                    等待回寄
+                                </li>
+                                <li data-name="等待签收" data-status="6">
+                                    <span class="iconfont"></span>
+                                    等待签收
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="kz-text-default pull-left clearfix device-period">
+                        <div class="pull-left" style="width: 155px;">
+                            <input type="checkbox" class="iconfont pull-left check">
+                            <p>一个月内到期设备</p>
+                        </div>
+                        <div class="pull-left text-center device-btn-group">
+                            <button type="reset" id="reset">重置</button>
+                            <button type="button" id="select">查询</button>
+                        </div>
+                    </li>
+                </form>
+            </ul>
+        </div>
+        <div class="what-sn">
+            <a href="javascript:" id="whatSn" class="kz-text-xs">什么是SN号?</a>
+        </div>
+    </div>
+    <!-- 设备列表 -->
+    <div class="account_table device-list">
+        <table class="table table-bordered table-hover text-center">
+            <thead class="text-center kz-text-sm thead">
+            <tr>
+                <td style="width:40%">设备信息</td>
+                <td style="width:20%">电脑SN号</td>
+                <td style="width:22%">租赁时间</td>
+                <td style="width:18%">操作</td>
+            </tr>
+            </thead>
+        </table>
+        <!-- 设备列表内容 -->
+        <div id="ondeviceCont">
+
+        </div>
+        <nav aria-label="Page navigation" style="text-align: center;">
+            <ul id='ondevicePage' class="pagination">
+                <!--设备列表分页-->
+            </ul>
+        </nav>
+    </div>
+</empty>

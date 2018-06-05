@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 1.古老做法--页面和数据混合了 -->
+	<!-- <?php
+		echo "<table border='1'>";
+		foreach($data1 as $key=>$rec) {
+			echo "<tr>";
+			echo "<td>".$rec['user_name']."</td>";
+			echo "<td>".$rec['age']."</td>";
+			echo "<td>".$rec['edu']."</td>";
+			echo "<td>".$rec['xingqu']."</td>";
+			echo "<td>".$rec['from']."</td>";
+			echo "<td>".$rec['reg_time']."</td>";
+			echo "<td>";
+			echo "<a href='?id={$rec['user_id']}' onclick = 'return queren()'>删除</a>";
+			echo "</td>";
+			echo "<tr/>";
+		}
+		echo "<table>";
+	?> -->
+	
+	<!-- 页面数据分离 -->
+	<table border='1'>
+	<?php
+		foreach($data1 as $key=>$rec) {
+	?>
+		<tr>
+			<td><?php echo $rec['user_name'];?></td>
+			<td><?php echo $rec['age'];?></td>
+			<td><?php echo $rec['edu'];?></td>
+			<td><?php echo $rec['xingqu'];?></td>
+			<td><?php echo $rec['from'];?></td>
+			<td><?php echo $rec['reg_time'];?></td>
+			<td>
+			<a href="?id=<?php echo $rec['reg_id'];?>" onclick = 'return queren()'>删除</a>
+			</td>
+		<tr/>
+	<?php
+		}
+	?>
+	<table>
+	当前用户总数为：<?php echo $data2; ?>。
+</body>
+</html>
+<script>
+	function queren(){
+		var s1 = window.confirm("你真的要删除吗?");
+		return s1;
+	}
+</script>

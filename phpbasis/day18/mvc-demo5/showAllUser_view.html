@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="?act=showForm">添加新用户</a>
+	用户列表：
+	<!-- 页面数据分离 -->
+	<table border='1'>
+	<?php
+		foreach($data1 as $key=>$rec) {
+	?>
+		<tr>
+			<td><?php echo $rec['user_name'];?></td>
+			<td><?php echo $rec['age'];?></td>
+			<td><?php echo $rec['edu'];?></td>
+			<td><?php echo $rec['xingqu'];?></td>
+			<td><?php echo $rec['from'];?></td>
+			<td><?php echo $rec['reg_time'];?></td>
+			<td>
+			<a href="?act=del&&id=<?php echo $rec['user_id'];?>" onclick = 'return queren()'>删除</a>
+			<a href="?act=detail&&id=<?php echo $rec['user_id'];?>">详细</a>
+			<a href="?act=edit&&id=<?php echo $rec['user_id'];?>">修改</a>
+			</td>
+		<tr/>
+	<?php
+		}
+	?>
+	<table>
+	当前用户总数为：<?php echo $data2; ?>。
+</body>
+</html>
+<script>
+	function queren(){
+		return window.confirm("你真的要删除吗?");
+	}
+</script>
