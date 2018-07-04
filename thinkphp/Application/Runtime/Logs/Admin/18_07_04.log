@@ -1,0 +1,31 @@
+[ 2018-07-04T09:47:10+08:00 ] 127.0.0.1 /index.php/Admin/Test/test12
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as count' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_dept` GROUP BY name,count(*) as count 
+
+[ 2018-07-04T16:33:46+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+ERR: 无法加载控制器:Index
+
+[ 2018-07-04T16:34:11+08:00 ] 127.0.0.1 /index.php/Admin/Public/logon
+ERR: 非法操作:logon
+
+[ 2018-07-04T16:34:24+08:00 ] 127.0.0.1 /index.php/Admin/Public/captcha
+ERR: 非法操作:captcha
+
+[ 2018-07-04T17:09:46+08:00 ] 127.0.0.1 /index.php/Admin/Indext/index
+ERR: 无法加载控制器:Indext
+
+[ 2018-07-04T17:09:59+08:00 ] 127.0.0.1 /index.php/Admin/Email/getMsgCount.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Email
+
+[ 2018-07-04T17:10:04+08:00 ] 127.0.0.1 /index.php/Admin/Email/getMsgCount.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Email
+
+[ 2018-07-04T17:10:06+08:00 ] 127.0.0.1 /index.php/Admin/Index/login
+ERR: 非法操作:login
+

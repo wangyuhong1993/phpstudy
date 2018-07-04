@@ -1,0 +1,12 @@
+[ 2018-07-04T09:26:47+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2018-07-04T16:33:46+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2018-07-04T16:34:24+08:00 ] 127.0.0.1 /Public/Admin/layer/layer.js
+ERR: 无法加载模块:Public
+
+[ 2018-07-04T16:34:24+08:00 ] 127.0.0.1 /Public/Admin/layer/layer.js
+ERR: 无法加载模块:Public
+
