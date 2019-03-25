@@ -76,6 +76,27 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/demandManage',
+    component: Layout,
+    name: 'demandManage',
+    meta: { title: '测试需求管理', icon: 'example' },
+    children: [
+      {
+        path: 'demandManage',
+        name: 'projectList',
+        component: () => import('@/views/demandManage/demandManage/list'),
+        meta: { title: '测试需求管理', icon: 'form' }
+      },
+      {
+        path: 'demandBaseline',
+        name: 'demandBaseline',
+        component: () => import('@/views/demandManage/demandBaseline/list'),
+        meta: { title: '测试需求基线管理', icon: 'form' }
+      }
+    ]
+  },
+
+  {
     path: '/nested',
     component: Layout,
     redirect: '/nested/menu1',
